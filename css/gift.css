@@ -1,0 +1,8 @@
+.gift {
+  background: url("../img/book.png");
+  background-size: cover;
+  background-position: center; }
+
+.gift_wrap {
+  display: grid;
+  grid-auto-flow: column; }

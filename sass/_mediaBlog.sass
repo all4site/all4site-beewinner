@@ -1,0 +1,66 @@
+//  Large Devices, Wide Screens
+@media only screen and (max-width: 1200px)
+	//
+
+//  Medium Devices, Desktops
+@media only screen and (max-width: 992px)
+	//
+
+//  Small Devices, Tablets
+@media only screen and (max-width: 768px)
+	.categoryBloc
+		display: none
+
+	.blogPage
+		grid-template-columns: 1fr
+
+	.blogAccordeon
+		display: grid
+		margin-bottom: 50px
+		color: darken($pink, 5%)
+
+		.topAccordeon
+			border-bottom: 1px solid $white
+			background: fade-out($pink, 0.5)
+
+			h4
+				color: darken($pink, 10%)
+				font-size: 1.5rem
+
+		.bottomAccordeon
+			display: grid
+			background: fade-out($pink, 0.9)
+			justify-content: center
+			padding: 20px 0
+
+			&.headings
+				display: grid
+				grid-template-columns: 1fr 1fr
+				justify-items: center
+
+				span:nth-of-type(2n+1)
+					justify-self: end
+
+			&.recomended
+				grid-row-gap: 20px
+
+			.recomendedBloc
+				max-width: 400px
+				display: grid
+				justify-items: center
+				padding: 20px
+				background: fade-out($white, 0.5)
+
+				img
+					max-width: 400px
+
+	.pagination
+		grid-column: span 1 !important
+
+//  Extra Small Devices, Phones
+@media only screen and (max-width: 480px)
+	//
+
+//  Custom, iPhone Retina
+@media only screen and (max-width: 320px)
+	//

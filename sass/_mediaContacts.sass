@@ -1,0 +1,28 @@
+//  Large Devices, Wide Screens
+@media only screen and (max-width: 1200px)
+	//
+
+//  Medium Devices, Desktops
+@media only screen and (max-width: 992px)
+	//
+
+//  Small Devices, Tablets
+@media only screen and (max-width: 768px)
+	.contactsWrapper
+		grid-template-columns: minmax(200px, 500px)
+		justify-content: center
+		grid-row-gap: 50px
+		grid-template-rows: min-content 500px
+
+//  Extra Small Devices, Phones
+@media only screen and (max-width: 480px)
+	.contactsWrapper
+		grid-template-rows: min-content min-content
+
+	.contactsInfo
+		span:nth-of-type(2n+1)
+			font-size: 1.3rem
+
+//  Custom, iPhone Retina
+@media only screen and (max-width: 320px)
+	//

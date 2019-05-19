@@ -1,0 +1,63 @@
+.small
+	display: none
+
+.hide
+	display: none
+
+.priceTabel
+	display: grid
+	grid-template-columns: 2fr 1fr
+	margin: 50px 0
+
+	span
+		padding: 10px 0
+		text-align: center
+		font-size: 1.5rem
+
+	span:nth-of-type(1)
+		background: $pink
+
+	span:nth-of-type(2)
+		background: $accent
+
+.priceApps
+	background: fade-out($pink, 0.5)
+	padding: 50px 0
+	color: $white
+	margin-top: 50px
+
+.priceAppsWrapper
+	display: grid
+	grid-template-columns: repeat(4, 1fr)
+	grid-column-gap: 20px
+
+	.boxApps
+		background: $blue
+		width: 100%
+		border-radius: 100%
+		display: grid
+		margin-top: 50px
+		border: 1px solid $pink
+		position: relative
+		padding: 50% 0
+		height: 0
+
+		&:hover
+			background: $accent
+
+			& > .circle
+				img
+					display: none
+				.zoom
+					display: none
+				.hide
+					display: grid
+		.circle
+			display: grid
+			position: absolute
+			width: 100%
+			height: 100%
+			justify-items: center
+			align-items: center
+			img
+				width: 50%

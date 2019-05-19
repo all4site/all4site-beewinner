@@ -1,0 +1,92 @@
+.contactsWrapper
+	display: grid
+	grid-template-columns: minmax(300px, 1fr) minmax(300px, 2fr)
+	grid-column-gap: 10px
+
+.contactsInfo
+	display: grid
+	background: fade-out($pink, 0.5)
+	color: $white
+	justify-items: center
+	text-align: center
+	grid-auto-rows: min-content
+	align-content: center
+	padding: 100px 0
+
+	img
+		width: 60px
+
+	img:nth-of-type(2)
+		margin-top: 20px
+
+	span:nth-of-type(2n+1)
+		font-size: 1.5rem
+		margin-top: 10px
+
+.ui-datepicker-inline
+	width: 100%
+	height: 100%
+	background: lighten($blue, 10%)
+
+	.ui-state-default
+		color: $white
+
+	.ui-datepicker-today
+		.ui-state-default
+			color: $pink
+
+	.ui-state-highlight a
+		background: inherit !important
+
+	.ui-datepicker-header
+		position: relative
+
+	.ui-datepicker-prev
+		background: url("../img/left.svg") no-repeat
+		position: absolute
+		cursor: pointer
+		width: 20px
+		top: 15px
+
+		span
+			opacity: 0
+
+	.ui-datepicker-next
+		background: url("../img/right.svg") no-repeat
+		position: absolute
+		right: 0
+		top: 15px
+		cursor: pointer
+		width: 20px
+
+		span
+			opacity: 0
+
+	.ui-datepicker-title
+		text-align: center
+		color: $pink
+
+	.ui-datepicker-calendar
+		width: 100%
+		height: 95%
+		position: relative
+
+		&::after
+			position: absolute
+			width: 100%
+			height: 100%
+			background: #000
+			z-index: 11
+
+		span
+			color: $pink
+
+		thead
+			tr
+				background: inherit
+
+		tr
+			background: darken($blue, 10%)
+
+		td
+			text-align: center

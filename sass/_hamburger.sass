@@ -1,0 +1,122 @@
+.smallMenuWrapper
+	display: grid
+	position: fixed
+	z-index: 999
+	height: 100%
+	width: 50px
+	right: 20px
+
+.smallMenu
+	display: grid
+	grid-template-columns: min-content
+	grid-row-gap: 10px
+	justify-items: center
+	position: absolute
+	z-index: 999
+
+.hamburger-inner,
+.hamburger-inner:before,
+.hamburger-inner:after
+	height: 1px
+	background: $blue
+	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3)
+
+.hamburger
+	padding: 0
+	display: grid
+	margin-bottom: 20px
+
+.text
+	span
+		color: $accent
+
+.smallMenuBox
+	display: grid
+	justify-items: center
+	align-items: center
+	grid-row-gap: 10px
+
+	.fab,
+	.fas
+		display: grid
+		color: $pink
+		font-size: 1.4rem
+		background: $blue
+		width: 50px
+		height: 50px
+		justify-items: center
+		align-items: center
+		border-radius: 100%
+
+.smallMenuShow
+	display: none
+	position: fixed
+	z-index: 999
+	width: 100%
+	height: 100%
+	top: 0
+	background: url('../img/sofa_old.jpg')
+	background-position: center
+	background-size: cover
+	justify-content: center
+
+	.smallMenuShowWrapper
+		background: fade-out($pink, .6)
+		display: grid
+		position: absolute
+		width: 100%
+		height: 100%
+		grid-template-columns: minmax(200px, 600px)
+		justify-content: center
+		top: 0
+		left: 0
+		align-content: center
+		grid-row-gap: 50px
+
+	.hamburger
+		position: fixed
+		right: 20px
+		top: 20px
+	a
+		transition: color .5s ease
+		color: $white
+
+		&:hover
+			color: darken($blue, 10%)
+
+	span
+		text-align: center
+		font-size: 2rem
+		text-transform: uppercase
+		color: $orange
+
+	ul
+		margin: 0
+		padding: 0
+
+	li
+		list-style: none
+		font-size: 1.5rem
+		text-align: center
+		text-transform: uppercase
+
+.smallMenuShowBox
+	display: grid
+	grid-auto-flow: column
+	grid-template-columns: repeat(4, minmax(50px, 55px))
+	grid-column-gap: 20px
+	justify-content: center
+	.circle
+		width: 100%
+		display: grid
+		padding: 50% 0
+		height: 0
+		border-radius: 100%
+		background: $blue
+		.fab,
+		.fas
+			display: grid
+			font-size: 1.5rem
+			line-height: 0
+			text-align: center
+			color: $orange
